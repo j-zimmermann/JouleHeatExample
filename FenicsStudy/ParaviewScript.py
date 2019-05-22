@@ -151,3 +151,4 @@ jouleHeatingTpvdDisplay.SetScalarBarVisibility(renderView1, True)
 # finally, restore active source
 SetActiveSource(annotateTimeFilter1)
 # ----------------------------------------------------------------
+SaveAnimation("movie.png")
