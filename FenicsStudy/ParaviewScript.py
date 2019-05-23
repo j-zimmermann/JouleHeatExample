@@ -6,6 +6,7 @@
 
 # trace generated using paraview version 5.5.2
 
+import os
 #### import the simple module from the paraview
 from paraview.simple import *
 #### disable automatic camera reset on 'Show'
@@ -44,7 +45,8 @@ SetActiveView(renderView1)
 # ----------------------------------------------------------------
 
 # create a new 'PVD Reader'
-jouleHeatingTpvd = PVDReader(FileName='/home/julius/Documents/gitlab/Bio-EM/fenics-examples/JouleHeatingFenics/FenicsStudy/JouleHeatingT.pvd')
+filename = os.getcwd() + '/JouleHeatingT.pvd'
+jouleHeatingTpvd = PVDReader(FileName=filename)
 jouleHeatingTpvd.PointArrays = ['f_29']
 
 # create a new 'Annotate Time Filter'

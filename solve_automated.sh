@@ -2,8 +2,8 @@
 
 FENICS='JouleHeating'
 h=1
-w=2
-r='0.2'
+w=1
+r='0.1'
 mn='MeshDiskwithHole_test'
 
 cd Mesh
