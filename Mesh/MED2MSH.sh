@@ -13,8 +13,10 @@ if [ "$#" -ne 2 ]; then
 fi
 
 if [[ $medfile == *.med ]]; then
-	mshfile=${medfile%.med}.msh
+	mshfile=${medfile%.med}.msh2
 	gmsh "$medfile" -"$dim" -v 0 -o "$mshfile"
+	mshfilenew=${medfile%.med}.msh
+	mv "$mshfile" "$mshfilenew"
 else 
 	echo "No .med file provided!"	
 fi

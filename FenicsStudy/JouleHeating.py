@@ -35,6 +35,7 @@ use the auto file!
 2 6 "Copper"
 '''
 
+order = 2
 d.set_log_active(False)
 meshpath = '../Mesh/'
 if len(sys.argv) > 1:
@@ -85,7 +86,7 @@ def sigma_T(Temp):
 
 
 # declare function space
-V = d.FunctionSpace(mesh, 'CG', 2)
+V = d.FunctionSpace(mesh, 'CG', order)
 print("Number of DOFs: {}".format(V.dim()))
 dx = d.dx
 
