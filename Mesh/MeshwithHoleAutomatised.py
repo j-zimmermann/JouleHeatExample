@@ -155,11 +155,11 @@ isDone = Mesh_1.Compute()
 [ Insulation_1_1, Insulation_2_1, Boundary_1_1, Boundary_2_1, CircleCenter_1, Copper_1 ] = Mesh_1.GetGroups()
 smesh.SetName(Mesh_1, 'Mesh_1')
 try:
-    Mesh_1.ExportMED(cur_path + '/' + meshname + '.med', 0, SMESH.MED_V2_2, 1, None, 1)
-    print 'Mesh exported'
+    Mesh_1.ExportMED(cur_path + '/' + meshname + '.med', auto_groups=0, minor=32, overwrite=1, meshPart=None, autoDimension=1)
+    print('Mesh exported')
     pass
 except:
-    print 'ExportToMEDX() failed. Invalid file name?'
+    print('ExportToMEDX() failed. Invalid file name?')
 smesh.SetName(Mesh_1, 'Mesh_1')
 
 ## Set names of Mesh objects
